@@ -39,7 +39,6 @@ This guide provides step-by-step instructions for deploying the Riva Transcripto
 
 4. **Monitor Deployment**
    - The AMP will automatically run the following steps:
-     - Environment validation
      - Dependency installation
      - Service setup and connectivity testing
      - Application deployment
@@ -58,13 +57,10 @@ This guide provides step-by-step instructions for deploying the Riva Transcripto
 
 3. **Run Setup Steps**
    ```bash
-   # Step 1: Validate environment
-   python 0_session-validate/validate.py
-
-   # Step 2: Install dependencies
+   # Step 1: Install dependencies
    python 1_session-install-deps/install.py
 
-   # Step 3: Setup and test service
+   # Step 2: Setup and test service
    python 2_job-setup/setup.py
    ```
 
@@ -88,7 +84,6 @@ This guide provides step-by-step instructions for deploying the Riva Transcripto
 
 | Component | CPU | Memory | Storage | GPU |
 |-----------|-----|---------|---------|-----|
-| Validation Session | 1 | 2GB | 1GB | No |
 | Install Session | 2 | 4GB | 2GB | No |
 | Setup Job | 2 | 4GB | 2GB | No |
 | Application | 2 | 8GB | 10GB | No |

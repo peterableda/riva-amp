@@ -18,18 +18,6 @@ runtimes:
 
 tasks:
   - type: run_session
-    name: Validate Environment
-    script: 0_session-validate/validate.py
-    short_summary: Validate CML environment and requirements
-    long_summary: >-
-      This script validates that the CML environment meets the requirements
-      for running the transcriptor service, including Python version and
-      required system capabilities.
-    kernel: python3
-    cpu: 1
-    memory: 2
-
-  - type: run_session
     name: Install Dependencies
     script: 1_session-install-deps/install.py
     short_summary: Install Python dependencies

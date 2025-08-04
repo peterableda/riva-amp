@@ -83,7 +83,6 @@ cd riva-transcriptor-service
 export RIVA_BASE_URL="https://your-riva-endpoint.com/v1"
 
 # Run the setup steps
-python 0_session-validate/validate.py
 python 1_session-install-deps/install.py
 python 2_job-setup/setup.py
 
@@ -185,8 +184,6 @@ The service supports multiple languages for transcription:
 
 ```
 riva-transcriptor-service/
-├── 0_session-validate/          # Environment validation
-│   └── validate.py
 ├── 1_session-install-deps/      # Dependency installation
 │   └── install.py
 ├── 2_job-setup/                 # Service setup and validation
@@ -254,8 +251,8 @@ riva-transcriptor-service/
 # Install dependencies
 pip install -r requirements.txt
 
-# Run validation
-python 0_session-validate/validate.py
+# Run setup
+python 1_session-install-deps/install.py
 
 # Start the application
 cd 3_app
