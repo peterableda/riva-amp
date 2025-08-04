@@ -1,0 +1,115 @@
+Riva Transcriptor Service
+Copyright 2024 Cloudera, Inc.
+
+This product includes software developed at Cloudera, Inc.
+(http://www.cloudera.com/).
+
+This product includes the following third-party components:
+
+================================================================================
+
+Gradio
+https://gradio.app/
+License: Apache License 2.0
+Copyright (c) 2020 Gradio Team
+
+================================================================================
+
+Requests
+https://requests.readthedocs.io/
+License: Apache License 2.0
+Copyright (c) 2019 Kenneth Reitz
+
+================================================================================
+
+PyDub
+https://github.com/jiaaro/pydub
+License: MIT License
+Copyright (c) 2011 James Robert
+
+================================================================================
+
+SoundFile
+https://python-soundfile.readthedocs.io/
+License: BSD License
+Copyright (c) 2013-2021 Bastian Bechtold
+
+================================================================================
+
+librosa
+https://librosa.org/
+License: ISC License
+Copyright (c) 2013-2023 librosa development team
+
+================================================================================
+
+NumPy
+https://numpy.org/
+License: BSD License
+Copyright (c) 2005-2024 NumPy Developers
+
+================================================================================
+
+SciPy
+https://scipy.org/
+License: BSD License
+Copyright (c) 2001-2024 SciPy Developers
+
+================================================================================
+
+Flask
+https://flask.palletsprojects.com/
+License: BSD License
+Copyright (c) 2010 Pallets
+
+================================================================================
+
+python-multipart
+https://github.com/andrew-d/python-multipart
+License: Apache License 2.0
+Copyright (c) 2012-2013 Andrew Dunham
+
+================================================================================
+
+python-dotenv
+https://github.com/theskumar/python-dotenv
+License: BSD License
+Copyright (c) 2014 Saurabh Kumar
+
+================================================================================
+
+NVIDIA Riva
+https://developer.nvidia.com/riva
+License: Please refer to NVIDIA Riva licensing terms
+This AMP integrates with NVIDIA Riva speech AI services. Users must comply
+with NVIDIA's licensing terms and conditions for Riva usage.
+
+================================================================================
+
+IMPORTANT NOTICE:
+
+This Applied Machine Learning Prototype (AMP) is designed to work with NVIDIA
+Riva services. Users are responsible for:
+
+1. Obtaining appropriate licenses for NVIDIA Riva usage
+2. Ensuring compliance with all third-party software licenses
+3. Configuring their own Riva service endpoints
+4. Managing data privacy and security in accordance with their organization's policies
+
+The authors and Cloudera, Inc. are not responsible for:
+- NVIDIA Riva service availability or performance
+- Data transmitted to or processed by external services
+- Compliance with third-party licensing terms
+- Security of audio data processed through the service
+
+Users should review all applicable licenses and terms of service before deploying
+this AMP in production environments.
+
+================================================================================
+
+This AMP may download and install additional software packages during setup.
+Please review the requirements.txt file for a complete list of Python
+dependencies and their respective licenses.
+
+For questions about licensing or third-party components, please consult with
+your legal and compliance teams.

@@ -1,0 +1,66 @@
+name: Riva Transcriptor Service
+description: A Cloudera AMP for audio transcription using NVIDIA Riva with microphone recording and file upload capabilities
+author: Cloudera Inc.
+specification_version: 1.0
+prototype_version: 1.0
+date: "2024-01-15"
+
+environment_variables:
+  RIVA_BASE_URL:
+    default: ""
+    description: "Base URL for the NVIDIA Riva transcription service endpoint"
+    required: true
+
+runtimes:
+  - editor: JupyterLab
+    kernel: Python 3.10
+    edition: Standard
+
+tasks:
+  - type: run_session
+    name: Validate Environment
+    script: 0_session-validate/validate.py
+    short_summary: Validate CML environment and requirements
+    long_summary: >-
+      This script validates that the CML environment meets the requirements
+      for running the transcriptor service, including Python version and
+      required system capabilities.
+    kernel: python3
+    cpu: 1
+    memory: 2
+
+  - type: run_session
+    name: Install Dependencies
+    script: 1_session-install-deps/install.py
+    short_summary: Install Python dependencies
+    long_summary: >-
+      Install all required Python packages for the transcriptor service,
+      including audio processing, web framework, and API client libraries.
+    kernel: python3
+    cpu: 2
+    memory: 4
+
+  - type: create_job
+    name: Setup Service
+    script: 2_job-setup/setup.py
+    short_summary: Initialize transcriptor service
+    long_summary: >-
+      Set up the transcriptor service environment, validate API connectivity,
+      and prepare the service for deployment.
+    cpu: 2
+    memory: 4
+
+  - type: start_application
+    name: Transcriptor Service
+    subdirectory: 3_app
+    script: app.py
+    short_summary: Launch the transcriptor web application
+    long_summary: >-
+      Start the main transcriptor service web application with microphone
+      recording and file upload capabilities for audio transcription.
+    cpu: 2
+    memory: 8
+    environment_variables:
+      RIVA_BASE_URL:
+        default: ""
+        description: "Base URL for the NVIDIA Riva transcription service endpoint"

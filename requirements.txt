@@ -1,0 +1,25 @@
+# Web framework and UI
+gradio==4.14.0
+flask==3.0.0
+
+# Audio processing
+pydub==0.25.1
+soundfile==0.12.1
+librosa==0.10.1
+numpy==1.24.3
+scipy==1.11.4
+
+# HTTP client for API calls
+requests==2.31.0
+
+# JSON processing
+python-json-logger==2.0.7
+
+# Environment variables
+python-dotenv==1.0.0
+
+# File handling
+python-multipart==0.0.6
+
+# Audio format conversion
+wave==0.0.2
