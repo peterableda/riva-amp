@@ -41,6 +41,7 @@ tasks:
     memory: 4
 
   - type: create_job
+    entity_label: setup-service-job
     name: Setup Service
     script: 2_job-setup/setup.py
     short_summary: Initialize transcriptor service
