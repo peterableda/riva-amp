@@ -42,7 +42,7 @@ tasks:
   - type: start_application
     name: Transcriptor Service
     subdirectory: 3_app
-    script: app.py
+    script: 3_app/app.py
     short_summary: Launch the transcriptor web application
     long_summary: >-
       Start the main transcriptor service web application with microphone
