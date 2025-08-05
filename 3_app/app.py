@@ -13,11 +13,7 @@ from typing import Optional, Tuple
 import logging
 import gradio as gr
 
-# Add parent utils to path
-sys.path.append(str(Path(__file__).parent.parent / "utils"))
-
-from transcription_client import RivaTranscriptionClient
-from audio_processor import AudioProcessor
+from utils import RivaTranscriptionClient, AudioProcessor
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)

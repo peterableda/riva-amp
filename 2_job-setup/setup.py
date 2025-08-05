@@ -10,11 +10,7 @@ import json
 import tempfile
 from pathlib import Path
 
-# Add utils to path
-sys.path.append(str(Path(__file__).parent.parent / "utils"))
-
-from transcription_client import RivaTranscriptionClient
-from audio_processor import AudioProcessor
+from utils import RivaTranscriptionClient, AudioProcessor
 
 def test_environment_variables():
     """Test that required environment variables are set."""
@@ -147,7 +143,11 @@ def create_sample_files():
 
 ## API Integration Example
 ```python
-from utils.transcription_client import RivaTranscriptionClient
+# For production use, import from 3_app/utils
+import sys
+from pathlib import Path
+sys.path.append(str(Path.cwd() / "3_app"))
+from utils import RivaTranscriptionClient
 
 client = RivaTranscriptionClient()
 result = client.transcribe_audio("audio_file.wav", "en-US")

@@ -262,11 +262,12 @@ python app.py
 ### Testing
 
 ```bash
-# Test API connectivity
-python utils/transcription_client.py
+# Test API connectivity from 3_app directory
+cd 3_app
+python -c "from utils import RivaTranscriptionClient; print('Utils import successful')"
 
 # Test audio processing
-python utils/audio_processor.py
+python -c "from utils import AudioProcessor; print('Audio processor import successful')"
 ```
 
 ## Integration Example
@@ -275,8 +276,13 @@ Here's a complete example of integrating with the Riva service:
 
 ```python
 import os
-from utils.transcription_client import RivaTranscriptionClient
-from utils.audio_processor import AudioProcessor
+import sys
+from pathlib import Path
+
+# Add 3_app to path to access utils
+sys.path.append(str(Path.cwd() / "3_app"))
+
+from utils import RivaTranscriptionClient, AudioProcessor
 
 # Set environment variables
 os.environ['RIVA_BASE_URL'] = 'https://your-riva-endpoint.com/v1'
