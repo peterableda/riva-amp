@@ -10,6 +10,9 @@ import json
 import tempfile
 from pathlib import Path
 
+# Add parent directory to path to access utils
+sys.path.append(str(Path(__file__).parent.parent))
+
 from utils import RivaTranscriptionClient, AudioProcessor
 
 def test_environment_variables():
@@ -143,10 +146,6 @@ def create_sample_files():
 
 ## API Integration Example
 ```python
-# For production use, import from 3_app/utils
-import sys
-from pathlib import Path
-sys.path.append(str(Path.cwd() / "3_app"))
 from utils import RivaTranscriptionClient
 
 client = RivaTranscriptionClient()

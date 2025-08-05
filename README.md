@@ -262,8 +262,7 @@ python app.py
 ### Testing
 
 ```bash
-# Test API connectivity from 3_app directory
-cd 3_app
+# Test API connectivity
 python -c "from utils import RivaTranscriptionClient; print('Utils import successful')"
 
 # Test audio processing
@@ -276,12 +275,6 @@ Here's a complete example of integrating with the Riva service:
 
 ```python
 import os
-import sys
-from pathlib import Path
-
-# Add 3_app to path to access utils
-sys.path.append(str(Path.cwd() / "3_app"))
-
 from utils import RivaTranscriptionClient, AudioProcessor
 
 # Set environment variables
