@@ -98,8 +98,8 @@ def create_sample_files():
 
     try:
         # Create data directory structure
-        data_dir = Path(__file__).parent.parent / "data"
-        temp_dir = Path(__file__).parent.parent / "temp"
+        data_dir = Path("/home/cdsw/data")
+        temp_dir = Path("/home/cdsw/temp")
 
         data_dir.mkdir(exist_ok=True)
         temp_dir.mkdir(exist_ok=True)

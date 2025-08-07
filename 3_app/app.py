@@ -35,7 +35,7 @@ class TranscriptorApp:
 
     def _load_config(self) -> dict:
         """Load configuration from file or use defaults."""
-        config_path = Path(__file__).parent.parent / "data" / "sample_config.json"
+        config_path = Path("/home/cdsw/data/sample_config.json")
 
         default_config = {
             "default_language": "en-US",

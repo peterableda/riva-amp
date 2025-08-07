@@ -39,10 +39,19 @@ tasks:
     cpu: 2
     memory: 4
 
+  - type: run_job
+    entity_label: setup-service-job
+    short_summary: Execute service setup
+    long_summary: >-
+      Run the setup job to validate environment variables, test API connectivity,
+      verify audio processing capabilities, and create sample configuration files.
+
   - type: start_application
     name: Transcriptor Service
-    subdirectory: 3_app
+    entity_label: transcriptor-app
+    subdomain: transcriptor
     script: 3_app/app.py
+    kernel: python3
     short_summary: Launch the transcriptor web application
     long_summary: >-
       Start the main transcriptor service web application with microphone
