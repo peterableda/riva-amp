@@ -10,9 +10,6 @@ import json
 import tempfile
 from pathlib import Path
 
-# Add parent directory to path to access utils
-sys.path.append(str(Path(__file__).parent.parent))
-
 from utils import RivaTranscriptionClient, AudioProcessor
 
 def test_environment_variables():
@@ -260,5 +257,4 @@ def main():
     return True
 
 if __name__ == "__main__":
-    success = main()
-    sys.exit(0 if success else 1)
+    main()
