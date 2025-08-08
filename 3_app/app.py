@@ -448,17 +448,18 @@ def main():
     # Create interface
     interface = app.create_interface()
 
-    # Launch the application
-    port = int(os.getenv('CDSW_APP_PORT', 7860))
+    print("🌐 Launching Riva Transcriptor Service...")
 
-    print(f"🌐 Launching application on port {port}")
-
+    # Launch with Cloudera ML Workbench configuration
     interface.launch(
-        server_name="0.0.0.0",
-        server_port=port,
+        share=True,
         show_error=True,
-        quiet=False
+        server_name='127.0.0.1',
+        server_port=int(os.getenv('CDSW_READONLY_PORT'))
     )
+
+    print("✅ Riva Transcriptor Service is ready!")
+
 
 if __name__ == "__main__":
     main()
